@@ -18,8 +18,11 @@ In this lab we learned how to read and use a State Machine, using a K-map to get
 ## Lab Questions
 
 ### Compare and contrast One Hot and Binary encodings
-One uses binary to check what outputs should be turned on one hot uses state encoding EX: 3 = 00100.
+One uses binary to check what outputs should be turned on. One hot uses state encoding EX: 3 = 00100. With one hot, only one D flip flop output at a time will be equal to one. 
+
 ### Which method did your team find easier, and why?
-one Hot, made alot more sense also didnt have to make the k-maps which had alot more room for error
+One Hot made alot more sense than binary. One hot also doesn't use k-maps, which had alot more room for error.
+
 ### In what conditions would you have to use one over the other? Think about resource utilization on the FPGA.
-one Hot is good for smaller machines while binary can be scaled bigger.
+One Hot is good for smaller machines with fewer states while binary can be scaled bigger. With one hot, the number of D flip flops is equal to the number of states, so it gets resource intensive
+when there's a lot of states. Binary is less straightforward, but the number of flip flops is equal to log2(Nstates), so you'll be using less resources to implement binary encodings on a lot of states. 
